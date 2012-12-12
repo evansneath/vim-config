@@ -43,6 +43,10 @@ set encoding=utf-8
 " To activate, use \f<char> or \w.
 let g:EasyMotion_leader_key = '<Leader>'
 
+" NERDTree settings
+" Remap NERDTreeToggle to make it easier to acces. Now ':nt'
+nmap :nt<CR> :NERDTreeToggle<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Restoring normal settings
