@@ -1,11 +1,60 @@
-"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Title:  Vim Options
 " Author: Evan Sneath
-"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle plugin loader
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set up Vundle for plugin management
+filetype off
+
+" Set Vundle directory and execute
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" This is required!
+Bundle 'gmarik/vundle'
+
+" Install Powerline - Pretty statusbar
+Bundle 'Lokaltog/vim-powerline'
+
+" Install EasyMotion - Simple find and move
+Bundle 'Lokaltog/vim-easymotion'
+
+" Install Jedi - Python code autocompletion
+Bundle 'davidhalter/jedi-vim'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Powerline settings
+"let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set encoding=utf-8
+
+" EasyMotion settings
+" To activate, use \f<char> or \w.
+let g:EasyMotion_leader_key = '<Leader>'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Restoring normal settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Allow syntax highlighting
+syntax on
+
+" Enable plugin and indent file loading
+filetype plugin indent on
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spacing options
-"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Allow for autoindentation
 set autoindent
@@ -17,22 +66,19 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
+" Don't wrap text at the end of the window
+set nowrap
 
-"""""""""""""""""""""""""""""""
-" Programming style options
-"""""""""""""""""""""""""""""""
 
-" Enable indentation based on file type
-filetype indent on
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Style options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Enable syntax highlighting
-syntax enable
+" Use the wombat color scheme
+colorscheme wombat
 
 " Enable line numbers
 set number
-
-" Don't wrap text at the end of the window
-set nowrap
 
 " Set the max line number width to 4
 set numberwidth=4
@@ -42,22 +88,6 @@ set ruler
 
 " Show matches while searching
 set showmatch
-
-"""""""""""""""""""""""""""""""
-" Plugin options
-"""""""""""""""""""""""""""""""
-
-" Enable pydiction autocomplete plugin
-filetype plugin on
-let g:pydiction_location = '/Users/evansneath/.vim/after/ftplugin/pydiction/complete-dict' 
-
-
-"""""""""""""""""""""""""""""""
-" Aestetic options
-"""""""""""""""""""""""""""""""
-
-" Use the wombat color scheme
-colorscheme wombat
 
 " If vim is running in GUI mode... 
 if has("gui_running")
@@ -70,3 +100,15 @@ endif
 
 " Always start the windows size at 84 columns
 set columns=84
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Keystroke options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Remap keys to make it easier to move between splits
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
