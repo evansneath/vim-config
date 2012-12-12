@@ -26,6 +26,9 @@ Bundle 'Lokaltog/vim-easymotion'
 " Install Jedi - Python code autocompletion
 Bundle 'davidhalter/jedi-vim'
 
+" Install NerdTree - Filesystem explorer
+Bundle 'scrooloose/nerdtree'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin settings
