@@ -29,6 +29,9 @@ Bundle 'davidhalter/jedi-vim'
 " Install NerdTree - Filesystem explorer
 Bundle 'scrooloose/nerdtree'
 
+" Install TagList - A source code object explorer
+Bundle 'vim-scripts/taglist.vim'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin settings
@@ -44,8 +47,22 @@ set encoding=utf-8
 let g:EasyMotion_leader_key = '<Leader>'
 
 " NERDTree settings
-" Remap NERDTreeToggle to make it easier to acces. Now ':nt'
-nmap :nt<CR> :NERDTreeToggle<CR>
+" Remap NERDTreeToggle to make it easier to acces. Now 'F2' key.
+map <F2> :NERDTreeToggle<CR>
+
+" TagList settings
+" Set location of the generated tags in ctags
+set tags=~/.tags
+" Remap TagList to make easier to access. Now 'F3' key.
+map <F3> :TlistToggle<CR>
+" Show TagList in a compact format
+let Tlist_Compact_Format = 1
+" Let TagList show tags for only 1 file at a time
+let Tlist_Show_One_File = 1
+" Remove the fold indicator column. It's ugly
+let Tlist_Enable_Fold_Column = 0
+" If TagList is the only open window, exit vim
+let Tlist_Exit_OnlyWindow = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
