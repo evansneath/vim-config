@@ -12,3 +12,5 @@ This configuration contains the following plugins:
 * [Jedi](https://github.com/davidhalter/jedi-vim)
 
 All packaged easily with [Vundle](http://www.vim.org/scripts/script.php?script_id=3458).
+
+In order to install all bundles with Vundle, open vim and run ```:BundleInstall```. 
